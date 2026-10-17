@@ -10,6 +10,9 @@ public class Pattern_01_HelperToCallMethod {
             case "hollowrightangledtriangle":
                 new Pattern_03_HollowRightAngledTriangle().hollowRightAngledTriangle(patternHeight);
                 break;
+             case "hollowsquare":
+                new Pattern_04_HollowSquare().hollowSquare(patternHeight);
+                break;
 
             default:
                 System.out.println("Coming Soon...");

@@ -1,6 +1,6 @@
 package pattern;
 
-public class Pattern_03_HollowRightAngledTriangle {
+public class Pattern_05_HollowIncreasingTriangle {
     void hollowRightAngledTriangle(int patternHeight) {
         System.out.println("\n**** Hollow Right Angled Triangle ****");
         for (int i = 0; i < patternHeight; i++) {

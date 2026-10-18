@@ -8,10 +8,13 @@ public class Pattern_01_HelperToCallMethod {
                 new Pattern_02_Square().square(patternHeight);
                 break;
             case "hollowrightangledtriangle":
-                new Pattern_03_HollowRightAngledTriangle().hollowRightAngledTriangle(patternHeight);
+                new Pattern_05_HollowIncreasingTriangle().hollowRightAngledTriangle(patternHeight);
                 break;
-             case "hollowsquare":
-                new Pattern_04_HollowSquare().hollowSquare(patternHeight);
+            case "hollowsquare":
+                new Pattern_03_HollowSquare().hollowSquare(patternHeight);
+                break;
+            case "increasingtriangle":
+                new Pattern_04_IncreasingTriangle().increasingTriangle(patternHeight);
                 break;
 
             default:

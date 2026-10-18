@@ -1,6 +1,6 @@
 package pattern;
 
-public class Pattern_04_HollowSquare {
+public class Pattern_03_HollowSquare {
     void hollowSquare(int patternHeight) {
         System.out.println("\n**** Hollow Square ****");
         for (int i = 1; i <= patternHeight; i++) {

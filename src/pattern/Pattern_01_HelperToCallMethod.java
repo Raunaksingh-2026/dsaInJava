@@ -16,6 +16,12 @@ public class Pattern_01_HelperToCallMethod {
             case "increasingtriangle":
                 new Pattern_04_IncreasingTriangle().increasingTriangle(patternHeight);
                 break;
+            case "decreasingtriangle":
+                new Pattern_06_DecreasingTriangle().decreasingTriangle(patternHeight);
+                break;
+            case "decreasinghollowtriangle":
+                new Pattern_07_HollowDecreasingTriangle().hollowDecreasingTriangle(patternHeight);
+                break;
 
             default:
                 System.out.println("Coming Soon...");

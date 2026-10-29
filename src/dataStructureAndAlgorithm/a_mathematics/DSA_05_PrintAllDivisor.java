@@ -1,6 +1,7 @@
 package dataStructureAndAlgorithm.a_mathematics;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
 =============================================================
@@ -51,6 +52,43 @@ public class DSA_05_PrintAllDivisor {
                 allDivisor.add(i);
             }
         }
+        // Return the list of all divisors
+        return allDivisor;
+    }
+    /*
+    =============================================================
+                  APPROACH 2: OPTIMIZED APPROACH
+    =============================================================
+    */
+
+    // Method to find all divisors efficiently using divisor pairs
+    ArrayList<Long> printAllDivisorOptimized(long number) {
+
+        // List to store all divisors
+        ArrayList<Long> allDivisor = new ArrayList<>();
+
+        // Check divisors only up to the square root of the number
+        for (long i = 1; i <= number / i; i++) {
+
+            // Check whether i divides the number completely
+            if (number % i == 0) {
+
+                // Add the smaller divisor
+                allDivisor.add(i);
+
+                // Find the corresponding divisor
+                long pairDivisor = number / i;
+
+                // Avoid adding the same divisor twice for perfect squares
+                if (i != pairDivisor) {
+                    allDivisor.add(pairDivisor);
+                }
+            }
+        }
+
+        // Sort divisors in ascending order
+        Collections.sort(allDivisor);
+
         // Return the list of all divisors
         return allDivisor;
     }

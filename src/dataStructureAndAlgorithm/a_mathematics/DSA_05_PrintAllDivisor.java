@@ -26,6 +26,23 @@ APPROACH 1: BRUTE FORCE
 
     Time Complexity  : O(n)
     Space Complexity : O(d)
+
+APPROACH 2: OPTIMIZED APPROACH
+-------------------------------------------------------------
+    1. Iterate from 1 while i * i <= number.
+    2. If i divides the number, add i to the list.
+    3. The corresponding divisor is number / i.
+    4. Add the corresponding divisor if it is different from i.
+    5. Sort the list to display divisors in ascending order.
+
+    Time Complexity  : O(sqrt(n) + d log d)
+    Space Complexity : O(d)
+
+    Where:
+    n = given number
+    d = total number of divisors
+
+Note -> The optimized approach checks divisor pairs and reduces the number of divisibility checks.
 */
 
 public class DSA_05_PrintAllDivisor {
@@ -55,6 +72,7 @@ public class DSA_05_PrintAllDivisor {
         // Return the list of all divisors
         return allDivisor;
     }
+
     /*
     =============================================================
                   APPROACH 2: OPTIMIZED APPROACH

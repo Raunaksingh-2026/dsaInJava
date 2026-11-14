@@ -38,7 +38,7 @@ public class DSA_00_ExtractDigitsFromNumberMain {
                         dsa03CheckPalindromeNumber.checkPalindrome(number)
         );
 
-        DSA_04_ArmstrongNumber dsa04ArmstrongNumber = new DSA_04_ArmstrongNumber();
+        DSA_04_ArmstrongNumberForThreeDigit dsa04ArmstrongNumber = new DSA_04_ArmstrongNumberForThreeDigit();
 
         // Call the method which check the Number is Armstrong or Not
         System.out.println(
@@ -67,6 +67,11 @@ public class DSA_00_ExtractDigitsFromNumberMain {
                 "Is Armstrong     : " +
                         dsa06ArmstrongNumber.isArmstrong(number)
         );
+
+        // DSA - 010 : Greatest Common Divisor
+        int a = 20, b = 40;
+
+        System.out.println("GCD by Brute Force: " + DSA_010_GreatestCommonDivisor.gcd(a, b));
 
         // Close the Scanner
         scanner.close();

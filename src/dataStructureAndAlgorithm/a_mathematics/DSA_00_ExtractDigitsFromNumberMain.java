@@ -73,6 +73,10 @@ public class DSA_00_ExtractDigitsFromNumberMain {
 
         System.out.println("GCD by Brute Force: " + DSA_010_GreatestCommonDivisor.gcd(a, b));
 
+        System.out.println("GCD till min(a, b): " + DSA_010_GreatestCommonDivisor.gcd2(a, b));
+
+        System.out.println("GCD till min(a, b): " + DSA_010_GreatestCommonDivisor.gcd3(a, b));
+
         // Close the Scanner
         scanner.close();
     }

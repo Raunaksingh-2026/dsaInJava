@@ -15,6 +15,9 @@ Approaches:
     2. Brute Force (Loop till min):
        - Check divisors only up to the smaller number.
        - GCD cannot be greater than min(a, b).
+    3. Brute Force (Reverse Loop):
+       - Start checking from min(a, b).
+       - Stop immediately when the first common divisor is found.
 
 Example:
 Input  : a = 12, b = 18
@@ -22,6 +25,7 @@ Output : 6
 
 Time Complexity by brute force : O(a)
 Time Complexity till min(a, b) : O(min(a, b))
+gcd3() : O(min(a, b))
 Space Complexity : O(1)
 */
 
@@ -56,7 +60,22 @@ public class DSA_010_GreatestCommonDivisor {
                 gcd = i;
             }
         }
+        return gcd;
+    }
 
+    // Approach 3: Reverse loop till min(a, b)
+    public static int gcd3(int a, int b) {
+
+        int gcd = 1;
+
+        // Start from the largest possible common divisor
+        for (int i = Math.min(a, b); i > 1; i--) {
+
+            if (a % i == 0 && b % i == 0) {
+                gcd = i;
+                break; // First common divisor is the GCD
+            }
+        }
         return gcd;
     }
 }

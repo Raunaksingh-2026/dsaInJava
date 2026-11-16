@@ -18,14 +18,18 @@ Approaches:
     3. Brute Force (Reverse Loop):
        - Start checking from min(a, b).
        - Stop immediately when the first common divisor is found.
+    4. Euclidean Algorithm (Subtraction):
+       - Repeatedly subtract the smaller number from the larger number
+       until both numbers become equal.
 
 Example:
 Input  : a = 12, b = 18
 Output : 6
 
-Time Complexity by brute force : O(a)
-Time Complexity till min(a, b) : O(min(a, b))
+gcd()  : O(a)
+gcd2() : O(min(a, b))
 gcd3() : O(min(a, b))
+gcd4() : O(max(a, b)) worst case for subtraction method
 Space Complexity : O(1)
 */
 
@@ -77,5 +81,20 @@ public class DSA_010_GreatestCommonDivisor {
             }
         }
         return gcd;
+    }
+
+    // Approach 4: Euclidean Algorithm using subtraction
+    public static int gcd4(int a, int b) {
+
+        while (a != b) {
+
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+
+        return a; // Both numbers become equal to their GCD
     }
 }

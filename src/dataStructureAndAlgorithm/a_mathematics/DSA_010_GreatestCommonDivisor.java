@@ -21,6 +21,7 @@ Approaches:
     4. Euclidean Algorithm (Subtraction):
        - Repeatedly subtract the smaller number from the larger number
        until both numbers become equal.
+   5. Euclidean Algorithm: Repeated modulo operation.
 
 Example:
 Input  : a = 12, b = 18
@@ -30,6 +31,7 @@ gcd()  : O(a)
 gcd2() : O(min(a, b))
 gcd3() : O(min(a, b))
 gcd4() : O(max(a, b)) worst case for subtraction method
+gcd5() : O(log(min(a, b))) for positive inputs
 Space Complexity : O(1)
 */
 
@@ -96,5 +98,20 @@ public class DSA_010_GreatestCommonDivisor {
         }
 
         return a; // Both numbers become equal to their GCD
+    }
+
+    // Approach 5: Euclidean Algorithm using modulo
+    public static int gcd5(int a, int b) {
+        while (a > 0 && b > 0) {
+
+            if (a > b) {
+                a = a % b;
+            } else {
+                b = b % a;
+            }
+        }
+
+        // When one number becomes zero, the other is the GCD
+        return (a == 0) ? b : a;
     }
 }

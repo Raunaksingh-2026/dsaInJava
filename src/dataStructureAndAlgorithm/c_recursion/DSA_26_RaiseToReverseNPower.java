@@ -1,5 +1,24 @@
 package dataStructureAndAlgorithm.c_recursion;
+/*
+DSA : Raise to Power of Its Own Reverse
 
+Problem:
+Given a number n, calculate n raised to the power of its reverse.
+
+Example:
+Input  : n = 12
+Reverse: 21
+Output : 12^21
+
+Approach:
+1. Reverse the given number.
+2. Calculate n^reverse using Binary Exponentiation.
+3. Divide the exponent by 2 in each recursive call.
+4. For odd exponents, multiply by n once more.
+
+Time Complexity  : O(log p), where p is the reversed number
+Space Complexity : O(log p) - Recursive call stack
+*/
 public class DSA_26_RaiseToReverseNPower {
     // Binary Exponentiation: Calculate n^p
     public int power(int n, int p) {

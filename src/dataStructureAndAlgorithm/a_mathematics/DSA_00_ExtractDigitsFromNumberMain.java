@@ -79,6 +79,8 @@ public class DSA_00_ExtractDigitsFromNumberMain {
 
         System.out.println("GCD till min(a, b): " + DSA_010_GreatestCommonDivisor.gcd4(a, b));
 
+        System.out.println("GCD till min(a, b): " + DSA_010_GreatestCommonDivisor.gcd5(a, b));
+
         // Close the Scanner
         scanner.close();
     }

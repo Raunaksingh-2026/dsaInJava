@@ -35,7 +35,7 @@ Approach:
 Note -> This implementation checks the sum of cubes, so it is suitable for the usual three-digit Armstrong number problem.
 */
 // Class to check whether a number is an Armstrong number
-public class DSA_04_ArmstrongNumber {
+public class DSA_04_ArmstrongNumberForThreeDigit {
 
     // Method to check whether a number is an Armstrong number
     boolean armstrongNumber(long number) {
